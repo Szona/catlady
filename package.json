@@ -1,0 +1,29 @@
+{
+  "name": "Portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp-minify": "0.0.15",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Szona/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "Alicja Ćmiel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Szona/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Szona/Portfolio#readme"
+}
