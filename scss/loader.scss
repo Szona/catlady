@@ -1,0 +1,26 @@
+.loader-wrapp {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  width: 25%;
+  height: 25%;
+}
+
+@media screen and (max-width: 1000px) {
+  .loader {
+    width: 40%;
+    height: 40%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .loader {
+    width: 60%;
+    height: 60%;
+  }
+}
+//amimation is in cat.svg
