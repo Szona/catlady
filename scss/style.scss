@@ -1,5 +1,11 @@
 @import "loader";
+@import "header";
+@import "glitch_text";
+@import "slider";
 
+body {
+  overflow: hidden;
+}
 * {
   margin: 0;
   padding: 0;

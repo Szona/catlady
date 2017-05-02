@@ -1,0 +1,25 @@
+.visible {
+  display: block;
+}
+.slid {
+  opacity: 0;
+  animation: slid 3.5s linear infinite;
+  animation-delay: 4100ms;
+}
+@keyframes slid {
+  0% {
+    position: absolute;
+    top: 2%;
+    opacity: 0.8;
+  }
+  50% {
+    position: absolute;
+    top: -50%;
+    opacity: 1;
+  }
+  100% {
+    position: absolute;
+    top: -98%;
+    opacity: 0.8;
+  }
+}

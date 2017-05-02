@@ -5,7 +5,7 @@
     #cat {
       stroke-dasharray: 1800;
       stroke-dashoffset: 0;
-      animation: dash 5s linear forwards;
+      animation: dash 4s linear forwards;
     }
     @keyframes dash {
       from {stroke-dashoffset: 1800;}
