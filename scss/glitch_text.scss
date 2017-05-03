@@ -1,4 +1,4 @@
-ul {
+#slider {
   position: absolute;
   top: 28%;
   left: 29%;
@@ -16,6 +16,10 @@ ul {
     margin:  40px;
   }
 }
+.visible {
+  display: block !important ;
+}
+
 .glitch::before,
 .glitch::after {
   content: "glitch";

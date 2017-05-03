@@ -2,6 +2,7 @@
 @import "header";
 @import "glitch_text";
 @import "slider";
+@import "menu";
 
 body {
   overflow: hidden;
@@ -10,4 +11,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.visible {
+  display: block !important;
 }
