@@ -62,21 +62,19 @@
     top: 37%;
     left: 12%;
     li {
-        font-size: 2em;
-
+        font-size: 1.8em;
     }
   }
 }
 
 @media screen and (max-width: 480px) {
   .slider {
-    height: 60px;
+    height: 55px;
     position: absolute;
-    top: 38%;
-    left: 3%;
+    top: 39%;
+    left: 8%;
     li {
-        font-size: 1.8em;
-
+        font-size: 1.2em;
     }
   }
 }
