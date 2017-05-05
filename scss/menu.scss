@@ -1,7 +1,14 @@
+.nav_bar {
+  width: 2.6em;
+  height: 2em;
+  display: block;
+}
+
+
 .hamburger_menu {
   display: none;
   position: absolute;
-  right: 5%;
+  right: 2%;
   top: 8%;
   width: 2.6em;
   height: 2em;
@@ -32,15 +39,15 @@
    }
 }
 .menu {
-  position: relative;
-  top:13%;
-  right: 60%;
+  position: absolute;
+  top:14%;
+  right: 2%;
   .menu_item {
     list-style: none;
     display: none;
     background: rgba(255, 255, 255, 0.8);
-    padding: 15px;
-    text-align: center;
+    padding: 20px 0 15px 10px;
+    text-align: right;
     font-size: 20px;
     width: 120px;
     a {

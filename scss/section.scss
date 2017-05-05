@@ -1,5 +1,8 @@
 section {
-  height: 500px;
-  width: 20px;
-  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  h1 {
+    font-size: 30px;
+    margin: 120px;
+  }
 }
