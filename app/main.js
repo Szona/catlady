@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
      var line = svgDoc.getElementById("draw");
 
 
-     function drawLine () {
+     function drawLine (container, line) {
        var lenght = 0;
        var pathLength = line.getTotalLength();
        console.log(pathLength);
