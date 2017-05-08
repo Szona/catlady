@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
       line.style.strokeDasharray = [length,pathLength].join(' ');
       console.log("strokeDasharray: "+[length,pathLength].join(' '));
 }
-    window.onscroll = function(this, line) {
+    window.onscroll = function() {
       drawLine();
     }
 
