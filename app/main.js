@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     mySVG.addEventListener("load",function() {
      svgDoc = mySVG.contentDocument;
-     alert("SVG contentDocument Loaded!");
+    //  alert("SVG contentDocument Loaded!");
      var line = svgDoc.getElementById("draw");
 
 
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
        var pathLength = line.getTotalLength();
        console.log(pathLength);
        var distanceFromTop = catPrints.pageYOffset - window.getBoundingClientRect();
-       var percentDone = 1 - (distanceFromTop / window.getBoundingClientRect();
+       var percentDone = 1 - (distanceFromTop / window.getBoundingClientRect());
        length = percentDone * pathLength;
        line.style.strokeDasharray = [length,pathLength].join(' ');
        console.log("strokeDasharray: "+[length,pathLength].join(' '));
