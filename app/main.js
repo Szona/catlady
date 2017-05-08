@@ -51,25 +51,28 @@ document.addEventListener("DOMContentLoaded", function() {
     var svgDoc;
 
     mySVG.addEventListener("load",function() {
+
      svgDoc = mySVG.contentDocument;
-    //  alert("SVG contentDocument Loaded!");
+     alert("SVG contentDocument Loaded!");
      var line = svgDoc.getElementById("draw");
+     var pathLength = line.getTotalLength();
+
+     line.style.strokeDasharray = pathLength;
+     line.style.strokeDashoffset = pathLength;
+
+     window.addEventListener("scroll", myFunction);
+
+     function myFunction() {
+       var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+       var draw = pathLength * scrollpercent;
+
+       // Reverse the drawing (when scrolling upwards)
+      triangle.style.strokeDashoffset = pathLength - draw;
+      }
 
 
-     function drawLine () {
-       var lenght = 0;
-       var pathLength = line.getTotalLength();
-       console.log(pathLength);
-       var distanceFromTop = catPrints.pageYOffset - window.getBoundingClientRect();
-       var percentDone = 1 - (distanceFromTop / window.getBoundingClientRect());
-       length = percentDone * pathLength;
-       line.style.strokeDasharray = [length,pathLength].join(' ');
-       console.log("strokeDasharray: "+[length,pathLength].join(' '));
-     }
-     drawLine();
-    //  window.onscroll = function() {
-     //
-    //  }
+
 
    }, false);
 
