@@ -51,12 +51,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var mySVG = document.getElementById("print");
     var svgDoc;
+
     mySVG.addEventListener("load",function() {
      svgDoc = mySVG.contentDocument;
      alert("SVG contentDocument Loaded!");
-}, false);
+     return svgDoc;
+   }, false);
 
-
+   var line = svgDoc.getElementById("draw");
+   
 
 
 });
