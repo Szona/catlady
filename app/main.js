@@ -45,9 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(catPrints);
 
 
-    window.onscroll = function() {
-      // drawLines();
-    }
+
 
     var mySVG = document.getElementById("print");
     var svgDoc;
@@ -59,6 +57,22 @@ document.addEventListener("DOMContentLoaded", function() {
      console.log(line);
    }, false);
 
+    function drawLine (container, line) {
+      var lenght = 0;
+      var pathLength = line.getTotalLength();
+      console.log(pathLength);
+      var distanceFromTop = container.offset().top - window.scrollTop();
+      var percentDone = 1 - (distanceFromTop / window.height());
+      length = percentDone * pathLength;
+      line.style.strokeDasharray = [length,pathLength].join(' ');
+      console.log("strokeDasharray: "+[length,pathLength].join(' '));
+}
+    window.onscroll = function(this, line) {
+      drawLine();
+    }
+
+
+    }
 
 
 
