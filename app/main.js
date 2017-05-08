@@ -53,16 +53,16 @@ document.addEventListener("DOMContentLoaded", function() {
     mySVG.addEventListener("load",function() {
 
      svgDoc = mySVG.contentDocument;
-     alert("SVG contentDocument Loaded!");
+    //  alert("SVG contentDocument Loaded!");
      var line = svgDoc.getElementById("draw");
      var pathLength = line.getTotalLength();
 
-     line.style.strokeDasharray = pathLength;
+     line.style.strokeDasharray = pathLength + ' ' + pathLength;
      line.style.strokeDashoffset = pathLength;
 
-     window.addEventListener("scroll", myFunction);
+     window.addEventListener("scroll", drawLines);
 
-     function myFunction() {
+     function drawLines() {
        var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
 
        var draw = pathLength * scrollpercent;
