@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", function() {
        var lenght = 0;
        var pathLength = line.getTotalLength();
        console.log(pathLength);
-       var distanceFromTop = catPrints.pageYOffset - window.scrollTop();
-       var percentDone = 1 - (distanceFromTop / window.height());
+       var distanceFromTop = catPrints.pageYOffset - window.getBoundingClientRect();
+       var percentDone = 1 - (distanceFromTop / window.getBoundingClientRect();
        length = percentDone * pathLength;
        line.style.strokeDasharray = [length,pathLength].join(' ');
        console.log("strokeDasharray: "+[length,pathLength].join(' '));
