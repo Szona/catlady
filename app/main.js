@@ -39,9 +39,31 @@ document.addEventListener("DOMContentLoaded", function() {
        menu.style.top = scrollTopItems + "px";
     }
 
+    //reveal cat prints
+
+    var catPrints = document.getElementsByClassName("print_wrapper");
+    console.log(catPrints);
 
 
+    window.onscroll = function() {
+      // drawLines();
+    }
 
+    var a = document.getElementById("print");
+
+           // It's important to add an load event listener to the object,
+           // as it will load the svg doc asynchronously
+           a.addEventListener("load",function(){
+
+               // get the inner DOM of alpha.svg
+               var svgDoc = a.contentDocument;
+               // get the inner element by id
+               var delta = svgDoc.getElementById("draw");
+               // add behaviour
+               delta.addEventListener("mousedown",function(){
+                       alert('hello world!')
+               }, false);
+           }, false);
 
 
 
