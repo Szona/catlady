@@ -49,21 +49,12 @@ document.addEventListener("DOMContentLoaded", function() {
       // drawLines();
     }
 
-    var a = document.getElementById("print");
-
-           // It's important to add an load event listener to the object,
-           // as it will load the svg doc asynchronously
-           a.addEventListener("load",function(){
-
-               // get the inner DOM of alpha.svg
-               var svgDoc = a.contentDocument;
-               // get the inner element by id
-               var delta = svgDoc.getElementById("draw");
-               // add behaviour
-               delta.addEventListener("change",function(){
-                       alert('hello world!')
-               }, false);
-           }, false);
+    var mySVG = document.getElementById("print");
+    var svgDoc;
+    mySVG.addEventListener("load",function() {
+     svgDoc = mySVG.contentDocument;
+     alert("SVG contentDocument Loaded!");
+}, false);
 
 
 
