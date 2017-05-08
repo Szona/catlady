@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
                // get the inner element by id
                var delta = svgDoc.getElementById("draw");
                // add behaviour
-               delta.addEventListener("mousedown",function(){
+               delta.addEventListener("change",function(){
                        alert('hello world!')
                }, false);
            }, false);
