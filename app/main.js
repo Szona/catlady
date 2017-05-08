@@ -56,11 +56,11 @@ document.addEventListener("DOMContentLoaded", function() {
      var line = svgDoc.getElementById("draw");
 
 
-     function drawLine (container, line) {
+     function drawLine () {
        var lenght = 0;
        var pathLength = line.getTotalLength();
        console.log(pathLength);
-       var distanceFromTop = container.offset().top - window.scrollTop();
+       var distanceFromTop = catPrints.offset().top - window.scrollTop();
        var percentDone = 1 - (distanceFromTop / window.height());
        length = percentDone * pathLength;
        line.style.strokeDasharray = [length,pathLength].join(' ');
