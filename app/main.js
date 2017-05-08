@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
        var draw = pathLength * scrollpercent;
 
        // Reverse the drawing (when scrolling upwards)
-      triangle.style.strokeDashoffset = pathLength - draw;
+      line.style.strokeDashoffset = pathLength - draw;
       }
 
 
