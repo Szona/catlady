@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
      svgDoc = mySVG.contentDocument;
      alert("SVG contentDocument Loaded!");
      var line = svgDoc.getElementById("draw");
-  
+
 
      function drawLine (container, line) {
        var lenght = 0;
@@ -65,14 +65,16 @@ document.addEventListener("DOMContentLoaded", function() {
        length = percentDone * pathLength;
        line.style.strokeDasharray = [length,pathLength].join(' ');
        console.log("strokeDasharray: "+[length,pathLength].join(' '));
- }
+     }
 
+     window.onscroll = function() {
+       drawLine();
+     }
+     
    }, false);
 
 
-    window.onscroll = function() {
-      drawLine();
-    }
+
 
 
 
