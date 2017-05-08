@@ -54,25 +54,28 @@ document.addEventListener("DOMContentLoaded", function() {
      svgDoc = mySVG.contentDocument;
      alert("SVG contentDocument Loaded!");
      var line = svgDoc.getElementById("draw");
-     console.log(line);
+  
+
+     function drawLine (container, line) {
+       var lenght = 0;
+       var pathLength = line.getTotalLength();
+       console.log(pathLength);
+       var distanceFromTop = container.offset().top - window.scrollTop();
+       var percentDone = 1 - (distanceFromTop / window.height());
+       length = percentDone * pathLength;
+       line.style.strokeDasharray = [length,pathLength].join(' ');
+       console.log("strokeDasharray: "+[length,pathLength].join(' '));
+ }
+
    }, false);
 
-    function drawLine (container, line) {
-      var lenght = 0;
-      var pathLength = line.getTotalLength();
-      console.log(pathLength);
-      var distanceFromTop = container.offset().top - window.scrollTop();
-      var percentDone = 1 - (distanceFromTop / window.height());
-      length = percentDone * pathLength;
-      line.style.strokeDasharray = [length,pathLength].join(' ');
-      console.log("strokeDasharray: "+[length,pathLength].join(' '));
-}
+
     window.onscroll = function() {
       drawLine();
     }
 
 
-    
+
 
 
 
