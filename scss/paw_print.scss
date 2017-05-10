@@ -1,0 +1,23 @@
+.print_wrapper {
+  display: none;
+  width: 120px;
+  height: 100px;
+  position: absolute;
+  top: 84%;
+  left: 47%;
+  .cat_print {
+    width: 13%;
+    position: relative;
+    // transform: rotate(-30deg);
+
+  }
+}
+@for $i from 1 through 5 {
+  .print_#{$i} {
+    transform: rotate(#{-30*$i}deg);
+    right: 10% + (40 * $i);
+  }
+}
+.print_wrapper img:nth-of-type(2n) {
+  top: -16%
+}

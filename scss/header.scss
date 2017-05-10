@@ -11,35 +11,14 @@
   height: 95vh;
   }
 }
-.print_wrapper {
-  display: none;
-  width: auto;
-  height: auto;
-  position: absolute;
-top: 77%;
-left: 16.5%;
 
-
-  .cat_print {
-    width: 134%;
-    height: auto;
-  }
-}
 
 @media screen and (max-width: 480px) {
   .header-wrapper .header {
     width: 94vw;
     height: 100%;
   }
-  .print_wrapper {
-    position: absolute;
-    top: 65%;
-    left: 1%;
-      .print_wrapper .cat_print {
-        width: 46vw;
-        height: 100%;
-      }
-    }
+
   }
 
 @media screen and (max-width: 1030px) {
@@ -47,13 +26,5 @@ left: 16.5%;
     width: 94vw;
     height: 100%;
   }
-  .print_wrapper {
-    position: absolute;
-    top: 65%;
-    left: 1%;
-       .cat_print {
-        width: 46vw;
-        height: 100%;
-      }
-    }
+  
   }

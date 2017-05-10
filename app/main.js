@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
     window.onscroll = function() {
   	   let scrollTop = window.pageYOffset + 50;
        let scrollTopItems = window.pageYOffset + 80;
-       hamburger.style.top =scrollTop + "px";
+       hamburger.style.top = scrollTop + "px";
        menu.style.top = scrollTopItems + "px";
     }
 
@@ -44,37 +44,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var catPrints = document.getElementsByClassName("print_wrapper");
     console.log(catPrints);
 
-
-
-
-    var mySVG = document.getElementById("print");
-    var svgDoc;
-
-    mySVG.addEventListener("load",function() {
-
-     svgDoc = mySVG.contentDocument;
-    //  alert("SVG contentDocument Loaded!");
-     var line = svgDoc.getElementById("draw");
-     var pathLength = line.getTotalLength();
-
-     line.style.strokeDasharray = pathLength + ' ' + pathLength;
-     line.style.strokeDashoffset = pathLength;
-
-     window.addEventListener("scroll", drawLines);
-
-     function drawLines() {
-       var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-
-       var draw = pathLength * scrollpercent;
-
-       // Reverse the drawing (when scrolling upwards)
-      line.style.strokeDashoffset = pathLength - draw;
-      }
-
-
-
-
-   }, false);
+    var print = document.getElementById("1");
+    // print.style.transform = "rotate(-30deg)";
 
 
 

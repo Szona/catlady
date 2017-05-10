@@ -1,26 +1,25 @@
 .slider {
   position: absolute;
-  top: 32%;
-  left: 29%;
-  transform: skewY(-15deg) skewX(-5deg);
-  height: 120px;
-
-
+  top: 37%;
+  left: 24%;
+  transform: skewY(-13deg) skewX(20deg);
+  height: 130px;
+  
   li {
     list-style: none;
-    font-size: 2em;
+    font-size: 1.1em;
     display: none;
     font-family: 'Roboto Mono', monospace;
     position: absolute;
     margin:  40px;
-    width: 120px;
+    width: 285px;
 
   }
 }
 
 .glitch::before,
 .glitch::after {
-  content: "glitch";
+  content: "$(Human).ready(function(){";
   position: absolute;
   top: 0;
   left: 0;
@@ -61,7 +60,7 @@
     top: 37%;
     left: 12%;
     li {
-        font-size: 1.8em;
+        font-size: 1em;
     }
   }
 }
