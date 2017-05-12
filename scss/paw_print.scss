@@ -1,5 +1,5 @@
 .print_wrapper {
-  display: none;
+  opacity: 0;
   width: 120px;
   height: 100px;
   position: absolute;
@@ -8,16 +8,85 @@
   .cat_print {
     width: 13%;
     position: relative;
-    // transform: rotate(-30deg);
+    opacity: 0;
 
   }
 }
-@for $i from 1 through 5 {
+
+@for $i from 1 through 6 {
   .print_#{$i} {
     transform: rotate(#{-30*$i}deg);
     right: 10% + (40 * $i);
   }
+
 }
-.print_wrapper img:nth-of-type(2n) {
+@for $i from 7 through 12 {
+  .print_#{$i} {
+    transform: rotate(#{-20*$i}deg);
+    top: -290% + (40* $i); //-10
+    right: -105% + ($i * 40 ) ;
+  }
+}
+
+@for $i from 13 through 17 {
+  .print_#{$i} {
+    transform: rotate(#{-11*$i}deg);
+    top: -545% + (40* $i);
+    right: -320% + (40 * $i);
+  }
+}
+@for $i from 19 through 24 {
+  .print_#{$i} {
+    transform: rotate(#{-11*$i}deg);
+    top: 196% - (3* $i);
+    left: -440% + (10 * $i);
+  }
+}
+@for $i from 25 through 30 {
+  .print_#{$i} {
+    transform: rotate(#{30*$i}deg);
+    top:  184% - (3 * $i);
+    left:  -339% + (10 * $i);
+  }
+}
+.print_wrapper img:nth-of-type(2), img:nth-of-type(4), img:nth-of-type(6){ //2 4 6
   top: -16%
+}
+.print_wrapper img:nth-of-type(20), img:nth-of-type(22), img:nth-of-type(24)  { //2 4 6
+  top: 150%;
+}
+.print_wrapper img:nth-of-type(26), img:nth-of-type(28), img:nth-of-type(30) {
+  top: 118%;
+}
+.print_18 {
+  opacity: 0;
+}
+
+@media screen and (max-width: 1030px) {
+  .print_wrapper {
+    position: absolute;
+    top: 69%;
+    left: 47%;
+    width: 128px;
+    height: 140px;
+  }
+  .cat_print {
+    width: 13%;
+    position: relative;
+    }
+}
+
+@media screen and (max-width: 480px) {
+  .print_wrapper {
+    position: absolute;
+    top: 66%;
+    left: 47%;
+    width: 95px;
+    height: 50px;
+  }
+  .cat_print {
+    width: 12%;
+    position: relative;
+    }
+
 }

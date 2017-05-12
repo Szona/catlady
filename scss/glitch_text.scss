@@ -4,7 +4,7 @@
   left: 24%;
   transform: skewY(-13deg) skewX(20deg);
   height: 130px;
-  
+
   li {
     list-style: none;
     font-size: 1.1em;
@@ -57,8 +57,8 @@
 @media screen and (max-width: 1030px) {
   .slider {
     position: absolute;
-    top: 37%;
-    left: 12%;
+    top: 42%;
+    left: 7%;
     li {
         font-size: 1em;
     }
@@ -69,10 +69,10 @@
   .slider {
     height: 55px;
     position: absolute;
-    top: 39%;
-    left: 8%;
+    top: 45%;
+    left: -1%;
     li {
-        font-size: 1.2em;
+        font-size: .6em;
     }
   }
 }

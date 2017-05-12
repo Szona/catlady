@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   setTimeout(function() {
     load[0].style.display="none";
-    catPrint[0].style.display="block";
+    catPrint[0].style.opacity="1";
     navBar.style.display="block";
     body.style.overflow="initial";
   }, 4100);
@@ -41,18 +41,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //reveal cat prints
 
-    var catPrints = document.getElementsByClassName("print_wrapper");
+    const catPrints = document.getElementsByClassName("print_wrapper");
     console.log(catPrints);
 
-    var print = document.getElementById("1");
-    // print.style.transform = "rotate(-30deg)";
+    const prints = document.querySelectorAll(".cat_print");
+    console.log(prints);
 
+    // var rect = prints[0].getBoundingClientRect(); może??
+    //
+    // console.log(rect);
 
+    window.onscroll = function() {
+      console.log("works");
+      let scroll = window.pageYOffset;
 
-
-
-
-
+      for (let i = 0; i < prints.length; i++) {
+        if (scroll > i*5) {
+          prints[i].style.opacity="1";
+          prints[17].style.opacity="0";
+        } else if (scroll <= i) {
+          prints[i].style.opacity="0";
+        }
+      }
+    }
 
 
 
