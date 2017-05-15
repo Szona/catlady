@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
@@ -29,10 +30,11 @@
     <div class="header-wrapper">
       <object type="image/svg+xml" data="img/header.svg" class="header">
       </object>
+      <span id="tooltip" class="tips one">Hover on cats!</span>
       <ul id="slider" class="slider">
-        <li class="glitch slid visible">$(Human).ready(function(){</li>
-        <li class="slid_deley visible"> </li>
-        <li class="slid_deley">});</li>
+        <li class="glitch_1 slid visible">$(Human).ready(function(){</li>
+        <li class="slid_deley visible">  </li>
+        <li class="slid_deley visible glitch_3">});</li>
       </ul>
     </div>
     <div class="print_wrapper">
@@ -70,8 +72,32 @@
       <img class="cat_print print_30" id="2" src="img/pawprint.svg" alt="self-drawing cat prints">
     </div>
   </header>
-  <section>
+  <section class="aboute_me">
     <h1>Hi!</h1>
+    <p>Once upon a time a Human was born. She grew as quickly as carrots after rain. Then she had her first computer and everything changed! So as an adult, after gaining some knowledge, I am going to learn the basics about the world wide web to make sure that cats, goats and dogs will always appear beautifully on web pages. </p>
+    <img class="cat_cleaning" id="cat_tip" src="img/catcleaning.svg" alt="self-drawing cat prints" >
+    <span class="tips two" id="tooltip">She always knew that cats are the superior species and it's a matter of time when they are going to regin the Internet.</span>
+  </section>
+  <section class="skills">
+    <h1>Skills</h1>
+    <h2>As the learing process progresses Human tought herself how to use:</h2>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>VANILLA JAVASCRIPT</li>
+      <li>JQUERY</li>
+      <li>SASS</li>
+      <li>GIT</li>
+    </ul>
+    <h2>And is willing to learn the future:</h2>
+    <ul>
+      <li>AngularJS</li>
+      <li>ReactJs</li>
+      <li>how to make preatier things with SVG animation</li>
+    </ul>
+
+  </section>
+  <section class="my_work">
   </section>
   <footer></footer>
 <script src="app/main.js"></script>

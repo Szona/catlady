@@ -1,6 +1,6 @@
 .slider {
   position: absolute;
-  top: 37%;
+  top: 32%;
   left: 24%;
   transform: skewY(-13deg) skewX(20deg);
   height: 130px;
@@ -17,25 +17,44 @@
   }
 }
 
-.glitch::before,
-.glitch::after {
-  content: "$(Human).ready(function(){";
+
+@mixin Glitch_before_and_after{
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0.6;
-  // width: 9.813em;
 }
-.glitch::before {
+@mixin Glitch_before {
   color: #0ff;
   z-index: -1;
   animation: glitch-effect 2s reverse infinite;
 }
-.glitch::after {
+@mixin Glitch_after {
   color: #f0f;
   z-index: -2;
   animation: glitch-effect 2s infinite;
 }
+.glitch_1::before,
+.glitch_1::after {
+  content: "$(Human).ready(function(){";
+  @include Glitch_before_and_after;
+}
+.glitch_3::before,
+.glitch_3::after {
+  content: "});";
+  @include Glitch_before_and_after;
+}
+
+.glitch_1::before,
+.glitch_3::before {
+  @include Glitch_before;
+}
+.glitch_1::after,
+.glitch_3::after {
+  @include Glitch_after;
+}
+
+
 @keyframes glitch-effect {
   0% {
     transform: translate(0);

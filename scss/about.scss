@@ -1,0 +1,56 @@
+.aboute_me {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  h1 {
+    font-size: 2.2em;
+    // margin: 120px 0 0 0;
+    // width: 100%;
+    line-height: 1em;
+    font-weight: 600;
+  }
+  p {
+    display: block;
+    width: 80vw;
+    font-size: 1.2em;
+    margin: 70px 0;
+    text-align: justify;
+    line-height: 1.5em;
+    text-indent: 1em;
+    font-weight: 400;
+  }
+  .cat_cleaning {
+    width: 15vw;
+    display: block;
+    margin: 20px 0;
+    cursor: pointer;
+    position: relative;
+  }
+
+}
+@mixin tool_tips {
+  font-style: italic;
+  width: 25vw;
+  position: absolute;
+  animation: fadein 2s;
+  display: none;
+}
+span .tips .one {
+  @include tool_tips;
+  top: 82%;
+  left: 32%;
+
+}
+ .two {
+  @include tool_tips;
+  top: 169%;
+  left: 22%;
+
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
