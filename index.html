@@ -30,11 +30,11 @@
     <div class="header-wrapper">
       <object type="image/svg+xml" data="img/header.svg" class="header">
       </object>
-      <span id="tooltip" class="tips one">Hover on cats!</span>
       <ul id="slider" class="slider">
-        <li class="glitch_1 slid visible">$(Human).ready(function(){</li>
-        <li class="slid_deley visible">  </li>
-        <li class="slid_deley visible glitch_3">});</li>
+        <li class="glitch_1 visible">$(Human).ready(function(){</li>
+        <li class="visible glitch_2"> Human.find('job'); </li>
+        <li class=" visible glitch_3">});</li>
+        <li class=" visible glitch_4">//hover over cats!</li>
       </ul>
     </div>
     <div class="print_wrapper">
@@ -75,8 +75,8 @@
   <section class="aboute_me">
     <h1>Hi!</h1>
     <p>Once upon a time a Human was born. She grew as quickly as carrots after rain. Then she had her first computer and everything changed! So as an adult, after gaining some knowledge, I am going to learn the basics about the world wide web to make sure that cats, goats and dogs will always appear beautifully on web pages. </p>
-    <img class="cat_cleaning" id="cat_tip" src="img/catcleaning.svg" alt="self-drawing cat prints" >
-    <span class="tips two" id="tooltip">She always knew that cats are the superior species and it's a matter of time when they are going to regin the Internet.</span>
+    <img class="cat_cleaning" id="cat_tip" data-number="1" src="img/catcleaning.svg" alt="self-drawing cat prints" >
+    <span class="tips two" id="tooltip" data-number="1">She always knew that cats are the superior species and it's a matter of time when they are going to regin the Internet.</span>
   </section>
   <section class="skills">
     <h1>Skills</h1>
@@ -86,6 +86,7 @@
       <li>CSS3</li>
       <li>VANILLA JAVASCRIPT</li>
       <li>JQUERY</li>
+      <li>GULP</li>
       <li>SASS</li>
       <li>GIT</li>
     </ul>
@@ -98,8 +99,19 @@
 
   </section>
   <section class="my_work">
+    <h1>What's done</h1>
+    <div>SitOnChair</div>
+    <div>Panda</div>
+    <div>this site</div>
+    <div>codePen</div>
   </section>
-  <footer></footer>
+  <section class="contact">
+    <h1>Human wants you to talk to her</h1>
+
+  </section>
+  <footer>
+    &copy 2017 Alicja Ćmiel
+  </footer>
 <script src="app/main.js"></script>
 </body>
 </html>

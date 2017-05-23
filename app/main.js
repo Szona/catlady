@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const prints = document.querySelectorAll(".cat_print");
     console.log(prints);
 
-    var rect = prints[0].getBoundingClientRect();  //nie użyte test
+    //var rect = prints[0].getBoundingClientRect();  //nie użyte test
 
     //console.log(rect);
 
@@ -69,14 +69,15 @@ document.addEventListener("DOMContentLoaded", function() {
   //tool tips
   const toolTips = document.querySelectorAll("#tooltip");
   console.log(toolTips);
-
+//sprawdza po dataset tip z tekstem
   const cat = document.querySelectorAll("#cat_tip");
 
   for (let i = 0; i < cat.length; i++) {
     cat[i].addEventListener("mouseover", function(e){
       for (let i = 0; i < toolTips.length; i++) {
+        if (toolTips[i].dataset.number == cat[i].dataset.number) {
           toolTips[i].style.display="block";
-          console.log("fsdf")
+        }
       }
 
     });
@@ -84,7 +85,6 @@ document.addEventListener("DOMContentLoaded", function() {
     cat[i].addEventListener("mouseout", function(e){
       for (let i = 0; i < toolTips.length; i++) {
           toolTips[i].style.display="none";
-          console.log("fhduf");
       }
     });
   }

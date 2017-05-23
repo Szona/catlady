@@ -13,7 +13,7 @@
     position: absolute;
     margin:  40px;
     width: 285px;
-
+    color: rgb(77, 77, 77);
   }
 }
 
@@ -39,18 +39,37 @@
   content: "$(Human).ready(function(){";
   @include Glitch_before_and_after;
 }
+.glitch_2::before,
+.glitch_2::after {
+  content: "Human.find('job');";
+  padding-left: 20px;
+  @include Glitch_before_and_after;
+}
 .glitch_3::before,
 .glitch_3::after {
   content: "});";
   @include Glitch_before_and_after;
 }
+.glitch_4 {
+  color: rgb(166, 166, 166);
+}
+.glitch_4::before,
+.glitch_4::after {
+  content: "//hover over cats!";
+  opacity: .6;
+  @include Glitch_before_and_after;
+}
 
 .glitch_1::before,
-.glitch_3::before {
+.glitch_2::before,
+.glitch_3::before,
+.glitch_4::before {
   @include Glitch_before;
 }
 .glitch_1::after,
-.glitch_3::after {
+.glitch_2::after,
+.glitch_3::after,
+.glitch_4::after {
   @include Glitch_after;
 }
 

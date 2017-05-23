@@ -1,13 +1,24 @@
 
-.slid {
+.glitch_1 {
   opacity: 0;
   animation: slid 3.5s linear infinite;
-  animation-delay: 5500ms;
+  animation-delay: 5000ms;
 }
-.slid_deley {
+.glitch_2 {
+  padding-left: 20px;
   opacity: 0;
   animation: slid 3.5s linear infinite;
-  animation-delay: 6900ms;
+  animation-delay: 5700ms;
+}
+.glitch_3 {
+  opacity: 0;
+  animation: slid 3.5s linear infinite;
+  animation-delay: 6200ms;
+}
+.glitch_4 {
+  opacity: 0;
+  animation: slid 3.5s linear infinite;
+  animation-delay: 7100ms;
 }
 @keyframes slid {
   0% {

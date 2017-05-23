@@ -5,6 +5,9 @@
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
+  background-color: rgb(236, 255, 229);
+  clip-path: ellipse(100% 95% at 51% 100%);
+
   h1 {
     font-size: 2.2em;
     // margin: 120px 0 0 0;
@@ -31,6 +34,7 @@
   }
 
 }
+
 @mixin tool_tips {
   font-style: italic;
   width: 25vw;
