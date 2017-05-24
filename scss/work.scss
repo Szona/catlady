@@ -1,9 +1,44 @@
 .my_work {
-  height: 100vh;
+  height: 120vh;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-flow: row wrap;
   padding: 10vh 0;
-  background-color: rgb(229, 236, 255);
+  background-color: rgb(126, 201, 255);
+  h1 {
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+    line-height: 1em;
+    font-weight: 400;
+    color: rgb(240, 248, 255);
+  }
+  div {
+    width: 330px;
+    height: 280px;
+    border: 1px solid rgb(240, 248, 255);
+    margin: 20px;
+  }
+  .project1 {
+    background-image: url("../img/sitonchair.jpg");
+    background-size: cover;
+
+  }
+  .project2 {
+    background-image: url("../img/pandaproject.png");
+    background-size: cover;
+    background-position: 100%;
+
+  }
+  .project3 {
+    background-image: url("../img/portfolio.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .project4 {
+    background-image: url("../img/codepen.png");
+    background-size: cover;
+    background-position: center;
+  }
 }

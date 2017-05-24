@@ -1,57 +1,74 @@
 .aboute_me {
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  background-color: rgb(236, 255, 229);
+  background-color: rgb(126, 201, 255);
   clip-path: ellipse(100% 95% at 51% 100%);
 
   h1 {
-    font-size: 2.2em;
-    // margin: 120px 0 0 0;
-    // width: 100%;
+    width: 100%;
+    font-size: 2em;
+    margin-top: 4em;
+    text-align: center;
     line-height: 1em;
-    font-weight: 600;
+    font-weight: 400;
+    color: rgb(240, 248, 255);
   }
   p {
     display: block;
-    width: 80vw;
-    font-size: 1.2em;
-    margin: 70px 0;
+    width: 55vw;
+    font-size: 1em;
+    margin: 40px 0;
     text-align: justify;
-    line-height: 1.5em;
+    line-height: 1.8em;
+    letter-spacing: .1em;
     text-indent: 1em;
     font-weight: 400;
+    color: rgb(240, 248, 255);
+  }
+  p::first-letter {
+    font-weight: bolder;
+    font-size: 1.1em;
+  }
+  p:nth-of-type(2) {
+    // width: 0;
+    // position: relative;
+    // right: 50%;
+    // top: 50%;
   }
   .cat_cleaning {
-    width: 15vw;
+    width: 12vw;
     display: block;
-    margin: 20px 0;
+    // margin: 20px 0;
+
     cursor: pointer;
-    position: relative;
+    // position: relative;
+    // left: -20%;
+    // top: 20%;
   }
 
 }
 
 @mixin tool_tips {
   font-style: italic;
-  width: 25vw;
+  font-size: .9em;
+  color: rgb(126, 201, 255);
+  width: 20vw;
   position: absolute;
   animation: fadein 2s;
   display: none;
-}
-span .tips .one {
-  @include tool_tips;
-  top: 82%;
-  left: 32%;
-
+  padding: 10px 10px 20px 10px;
+  webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 44% 94%, 46% 75%, 0% 75%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 44% 94%, 46% 75%, 0% 75%);
+  background-color: rgb(240, 248, 255);
 }
  .two {
   @include tool_tips;
-  top: 169%;
-  left: 22%;
+  top: 175%;
+  left: 50%;
 
 }
 @keyframes fadein {

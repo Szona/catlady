@@ -13,7 +13,11 @@
 
   }
 }
-
+@for $i from 12 through 30 {
+  .print_#{$i} {
+    stroke: #fff;
+  }
+}
 @for $i from 1 through 6 {
   .print_#{$i} {
     transform: rotate(#{-30*$i}deg);

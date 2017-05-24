@@ -89,7 +89,33 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
+  function slider() {
+        var next = document.querySelector(".right");
+        var prev = document.querySelector(".left");
+        var images = document.querySelectorAll(".carousel li");
+        var imageCount = 0;
 
+        images[imageCount].classList.add('visible');
+
+        next.addEventListener("click", function(event) {
+          images[imageCount].classList.remove('visible');
+          imageCount++;
+          if (imageCount >= images.length) {
+            imageCount = 0;
+          }
+          images[imageCount].classList.add('visible');
+        });
+
+        prev.addEventListener("click", function(event) {
+          images[imageCount].classList.remove('visible');
+          imageCount--;
+          if (imageCount < 0) {
+            imageCount = images.length - 1;
+          }
+          images[imageCount].classList.add('visible');
+        });
+      }
+      slider();
 
 
 });

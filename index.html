@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-store" />
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,41 +74,60 @@
     </div>
   </header>
   <section class="aboute_me">
-    <h1>Hi!</h1>
-    <p>Once upon a time a Human was born. She grew as quickly as carrots after rain. Then she had her first computer and everything changed! So as an adult, after gaining some knowledge, I am going to learn the basics about the world wide web to make sure that cats, goats and dogs will always appear beautifully on web pages. </p>
+    <h1>Hello World!</h1>
+    <p>Once upon a time a Human was born. She grew as quickly as carrots after rain. Then she had her first computer and everything changed! 21 years later, after gaining some knowledge, she decide to learn the basics about the World Wide Web to make sure that cats, goats and dogs will always appear beautifully on responsive web pages. After 2 months intensive programming bootcamp for humans and some time spent on messing around with CSS and HTML she's trained enough to find first job as front-end developer.</p>
     <img class="cat_cleaning" id="cat_tip" data-number="1" src="img/catcleaning.svg" alt="self-drawing cat prints" >
-    <span class="tips two" id="tooltip" data-number="1">She always knew that cats are the superior species and it's a matter of time when they are going to regin the Internet.</span>
+    <span class="tips two" id="tooltip" data-number="1">She always knew that cats are the superior species.</span>
+<!-- //and it's a matter of time when they are going to regin the Internet. -->
   </section>
   <section class="skills">
     <h1>Skills</h1>
-    <h2>As the learing process progresses Human tought herself how to use:</h2>
-    <ul>
+    <h2>As the learing process progresses Human tought herself:</h2>
+    <div class="arrows">
+      <a class="arrow left" > <  </a>
+      <a class="arrow right" >  > </a>
+    </div>
+    <ul class="carousel">
       <li>HTML5</li>
       <li>CSS3</li>
-      <li>VANILLA JAVASCRIPT</li>
+      <li>JAVASCRIPT</li>
       <li>JQUERY</li>
       <li>GULP</li>
       <li>SASS</li>
       <li>GIT</li>
+      <li>RWD</li>
     </ul>
-    <h2>And is willing to learn the future:</h2>
-    <ul>
+    <h2>And is willing to learn the in future:</h2>
+    <ul class="list">
       <li>AngularJS</li>
       <li>ReactJs</li>
-      <li>how to make preatier things with SVG animation</li>
+      <li>SVG animation</li>
     </ul>
 
   </section>
   <section class="my_work">
-    <h1>What's done</h1>
-    <div>SitOnChair</div>
-    <div>Panda</div>
-    <div>this site</div>
-    <div>codePen</div>
+    <h1>Projects</h1>
+    <div class="project1"></div>
+    <div class="project2"></div>
+    <div class="project3"></div>
+    <div class="project4"></div>
   </section>
   <section class="contact">
     <h1>Human wants you to talk to her</h1>
+    <form action="/action_page.php">
 
+      <label for="name"></label>
+      <input type="text" id="name" name="name" placeholder="Your name..">
+
+      <label for="email"></label>
+      <input type="email" id="email" name="email" placeholder="Your email..">
+
+      <label for="subject"></label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+      <input type="submit" value="Submit">
+
+    </form>
   </section>
   <footer>
     &copy 2017 Alicja Ćmiel
