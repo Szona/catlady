@@ -1,59 +1,101 @@
-.nav_bar {
-  width: 2.6em;
-  height: 2em;
-  display: inline;
-}
 
+$navWidth: 300px;
+$hamburgerSize: 60px;
 
-.hamburger_menu {
-  display: none;
-  position: absolute;
-  right: 2%;
-  top: 8%;
-  width: 2.6em;
-  height: 2em;
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.8);
-
-
-.line1, .line2, .line3 {
-  display: block;
-  background-color: #000;
-  width: 2.3em;
-  height: .13em;
-  margin: .4em .2em;
-  transition: all 0.2s ease-out;
-  }
-  &.open {
-       .line1 {
-           transform: translateY(0.6em) rotate(45deg);
-       }
-
-       .line2 {
-           opacity: 0;
-       }
-
-       .line3 {
-           transform: translateY(-0.6em) rotate(-45deg);
-       }
-   }
-}
 .menu {
-  position: absolute;
-  top:14%;
-  right: 2%;
+  opacity: 0;
+  z-index: 10;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: $navWidth;
+  height: 100%;
+  background: rgb(41, 128, 185);
+  clip-path: circle(29px at calc(#{$navWidth} - 5vw - #{$hamburgerSize / 2}) calc(5vh + #{$hamburgerSize / 2}));
+  transition: all .8s cubic-bezier(0.86, 0, 0.07, 1);
+  &.active {
+    clip-path: circle(75% at #{$navWidth / 2} 50vh);
+  }
   .menu_item {
-    list-style: none;
-    display: none;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px 0 15px 10px;
-    text-align: right;
-    font-size: 20px;
-    width: 120px;
+    display: block;
+    font-size: 2em;
+    text-align: center;
+    line-height: 1em;
+    font-weight: 400;
+    color: rgb(240, 248, 255);
+    text-transform: uppercase;
+    padding: 1vh 5vw;
+    transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    opacity: 0;
+    transform: translateY(50%);
+
     a {
+      z-index: 10;
+      color: rgb(240, 248, 255);
       text-decoration: none;
-      color: #000;
-      text-transform: uppercase;
+    }
+    &.active {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
+}
+.hamburger_menu {
+  $p: &;
+  display: none;
+  width: $hamburgerSize;
+  height: $hamburgerSize;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  z-index: 11;
+  top: 5vh;
+  right: 5vw;
+  background: rgb(41, 128, 185);
+  & span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2px;
+    width: 50%;
+    backgroud-clip: padding-box;
+    background: darken(white, 3);
+    transition: all .8s cubic-bezier(0.86, 0, 0.07, 1);
+    &:nth-child(1) {
+      transform: translate(-50%, calc(-50% - 8px));
+    }
+
+    &:last-child {
+      transform: translate(-50%, calc(-50% + 8px));
+    }
+}
+&.active {
+
+    span {
+      background: darken(white, 3);
+
+      &:nth-child(1) {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+         transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+}
+@media screen and (max-width: 1030px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
 }

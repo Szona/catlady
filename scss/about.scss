@@ -1,12 +1,13 @@
 .aboute_me {
-  height: 100vh;
+  // height: 100vh
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  background-color: rgb(126, 201, 255);
+  background-color: rgb(52, 152, 219);
   clip-path: ellipse(100% 95% at 51% 100%);
+  -webkit-clip-path: ellipse(100% 95% at 51% 100%);
 
   h1 {
     width: 100%;
@@ -74,4 +75,39 @@
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+@media screen and (max-width: 1030px) {
+  .aboute_me {
+    -webkit-clip-path: ellipse(191% 100% at 50% 100%);
+    clip-path: ellipse(191% 100% at 50% 100%);
+    h1 {
+      margin: 1.5em;
+    }
+    p {
+      margin: 0;
+      width: 85vw;
+      letter-spacing: normal;
+    }
+    .cat_cleaning {
+      width: 50vw;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .aboute_me {
+    .two {
+
+      width: 44vw;
+      position: absolute;
+      top: 145%;
+      left: 50%;
+    }
+
+    .cat_cleaning {
+      width: 50vw;
+    }
+  }
 }

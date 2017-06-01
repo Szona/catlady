@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   padding: 10vh 0;
-  background-color:rgb(126, 201, 255);
+  background-color:rgb(52, 152, 219);
   h1 {
     width: 100%;
     font-size: 2em;
@@ -40,7 +40,7 @@
     font-weight: lighter;
     position: absolute;
     color: rgb(240, 248, 255);
-    top: 224%;
+    top: 213%;
     text-decoration: none;
     cursor: pointer;
   }
@@ -66,6 +66,39 @@
     line-height: 1.8em;
     letter-spacing: .1em;
     padding: 0 1em ;
+  }
+
+}
+@media screen and (max-width: 1030px) {
+
+}
+
+@media screen and (max-width: 480px) {
+  .skills {
+
+    h2 {
+      width: 80vw;
+      font-size: 1em;
+      text-align: center;
+    }
+    .carousel li {
+      font-size: 2.5em;
+    }
+    .arrows {
+      position: absolute;
+      top: 210%;
+      left: 5%;
+      font-size: .8em;
+    }
+    .right {
+      left: 280px;
+    }
+    .left {
+      right: 280px;
+    }
+    .list li {
+      font-size: 1.4em;
+    }
   }
 
 }

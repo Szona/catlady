@@ -1,12 +1,10 @@
 .header-wrapper {
-  // width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: rgb(250, 250, 250);
-
+  background-color: rgb(236, 240, 241);
   .header {
   padding-top: 10px;
   width: 100vw;
@@ -15,7 +13,7 @@
 }
 .header-wrapper::before {
   content: "";
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(236, 240, 241);
   width: 100%;
   height: 20%;
   position: absolute;
@@ -25,9 +23,21 @@
 
 
 @media screen and (max-width: 480px) {
-  .header-wrapper .header {
-    width: 94vw;
-    height: 100%;
+  .header-wrapper {
+    height: 80vh;
+  }
+  .header {
+    width: 100vw;
+    height: 100vh;
+  }
+  .header-wrapper::before {
+    content: "";
+    background-color: rgb(236, 240, 241);
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    bottom: 1%;
+    left: 0;
   }
 
   }

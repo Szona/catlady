@@ -4,12 +4,14 @@ document.addEventListener("DOMContentLoaded", function() {
   const load = document.getElementsByClassName("loader-wrapper");
   const body = document.querySelector("body");
   const navBar = document.querySelector(".hamburger_menu");
+  const menu = document.querySelector(".menu");
   const catPrint = document.getElementsByClassName("print_wrapper");
 
   setTimeout(function() {
     load[0].style.display="none";
     catPrint[0].style.opacity="1";
     navBar.style.display="block";
+    menu.style.opacity="1";
     body.style.overflow="initial";
   }, 4100);
 
@@ -17,28 +19,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   //hamburger menu
+
+  const nav = document.querySelector(".menu");
   const hamburger = document.querySelector(".hamburger_menu");
-  const menu = document.querySelector(".menu");
-  const li = document.querySelectorAll(".nav_bar .menu li");
+  const menuItems = document.querySelectorAll(".menu_item");
 
-  hamburger.addEventListener("click", function(e){
-    this.classList.toggle("open");
-
-    for (let i = 0; i < li.length; i++) {
-      li[i].classList.toggle("visible");
+  hamburger.addEventListener('click', toggleNav);
+  function toggleNav() {
+  nav.classList.toggle('active');
+  hamburger.classList.toggle('active');
+  for (var i = 0, ii = menuItems.length; i < ii; i++) {
+    menuItems[i].classList.toggle('active');
     }
-
-  });
-
-  //sticky menu
-
-    window.onscroll = function() {
-  	   let scrollTop = window.pageYOffset + 50;
-       let scrollTopItems = window.pageYOffset + 80;
-       hamburger.style.top = scrollTop + "px";
-       menu.style.top = scrollTopItems + "px";
-    }
-
+  }
     //reveal cat prints
 
     const catPrints = document.getElementsByClassName("print_wrapper");
@@ -90,10 +83,10 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function slider() {
-        var next = document.querySelector(".right");
-        var prev = document.querySelector(".left");
-        var images = document.querySelectorAll(".carousel li");
-        var imageCount = 0;
+        const next = document.querySelector(".right");
+        const prev = document.querySelector(".left");
+        const images = document.querySelectorAll(".carousel li");
+        let imageCount = 0;
 
         images[imageCount].classList.add('visible');
 
